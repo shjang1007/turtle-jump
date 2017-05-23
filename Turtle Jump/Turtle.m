@@ -11,6 +11,10 @@
 @implementation Turtle
 + (id)turtle {
     Turtle *turtle = [Turtle spriteNodeWithColor:[UIColor whiteColor] size:CGSizeMake(50, 50)];
+    
+    SKSpriteNode *turtleImg = [SKSpriteNode spriteNodeWithImageNamed:@"turtle.png"];
+    [turtle addChild:turtleImg];
+    
     turtle.name = @"turtle";
     turtle.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:turtle.size];
     

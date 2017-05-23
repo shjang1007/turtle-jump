@@ -12,22 +12,32 @@
 @implementation GameScene {
     SKShapeNode *_spinnyNode;
     SKLabelNode *_label;
+    
+    Turtle *turtle;
+    SKNode *board;
+    
 }
 
 - (void)didMoveToView:(SKView *)view {
     // Setup your scene here
-    self.anchorPoint = CGPointMake(0.5, 0);
+    self.anchorPoint = CGPointMake(0.5, 0.5);
+    
+    
+    board = [SKNode node];
+    [self addChild:board];
+    
+    
     
     SKSpriteNode *ground = [SKSpriteNode spriteNodeWithColor:[UIColor greenColor] size:CGSizeMake(self.frame.size.width, 20)];
     ground.position = CGPointMake(0, 0 + ground.frame.size.height / 2);
     ground.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:ground.size];
     ground.physicsBody.dynamic = NO;
     
-    [self addChild:ground];
+    [board addChild:ground];
     
-    Turtle *turtle = [Turtle turtle];
+    turtle = [Turtle turtle];
     turtle.position = CGPointMake(0, 420 + turtle.frame.size.height / 2);
-    [self addChild: turtle];
+    [board addChild:turtle];
     
     
     // Get label node from scene and store it for use later
@@ -50,6 +60,14 @@
                                                 ]]];
 }
 
+- (void)didSimulatePhysics {
+    [self centerOnNode:turtle];
+}
+
+- (void)centerOnNode:(SKNode *)node {
+    CGPoint positionInScene = [self convertPoint:node.position fromNode:node.parent];
+    board.position = CGPointMake(board.position.x - positionInScene.x, board.position.y - positionInScene.y);
+}
 
 - (void)touchDownAtPoint:(CGPoint)pos {
     SKShapeNode *n = [_spinnyNode copy];
@@ -78,7 +96,6 @@
 //    
 //    for (UITouch *t in touches) {[self touchDownAtPoint:[t locationInNode:self]];}
     
-    Turtle *turtle = (Turtle *)[self childNodeWithName:@"turtle"];
     [turtle moveRight];
     
 }
