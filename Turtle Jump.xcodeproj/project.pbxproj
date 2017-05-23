@@ -1,0 +1,336 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BD4E90F91ED4C42100C689FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4E90F81ED4C42100C689FB /* main.m */; };
+		BD4E90FC1ED4C42100C689FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4E90FB1ED4C42100C689FB /* AppDelegate.m */; };
+		BD4E90FE1ED4C42100C689FB /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = BD4E90FD1ED4C42100C689FB /* GameScene.sks */; };
+		BD4E91001ED4C42100C689FB /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = BD4E90FF1ED4C42100C689FB /* Actions.sks */; };
+		BD4E91031ED4C42100C689FB /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4E91021ED4C42100C689FB /* GameScene.m */; };
+		BD4E91061ED4C42100C689FB /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4E91051ED4C42100C689FB /* GameViewController.m */; };
+		BD4E91091ED4C42100C689FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD4E91071ED4C42100C689FB /* Main.storyboard */; };
+		BD4E910B1ED4C42100C689FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD4E910A1ED4C42100C689FB /* Assets.xcassets */; };
+		BD4E910E1ED4C42100C689FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD4E910C1ED4C42100C689FB /* LaunchScreen.storyboard */; };
+		BD4E91171ED4CD3400C689FB /* Turtle.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4E91161ED4CD3400C689FB /* Turtle.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BD4E90F41ED4C42100C689FB /* Turtle Jump.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Turtle Jump.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD4E90F81ED4C42100C689FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BD4E90FA1ED4C42100C689FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BD4E90FB1ED4C42100C689FB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BD4E90FD1ED4C42100C689FB /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		BD4E90FF1ED4C42100C689FB /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		BD4E91011ED4C42100C689FB /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		BD4E91021ED4C42100C689FB /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		BD4E91041ED4C42100C689FB /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		BD4E91051ED4C42100C689FB /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		BD4E91081ED4C42100C689FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BD4E910A1ED4C42100C689FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BD4E910D1ED4C42100C689FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BD4E910F1ED4C42100C689FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD4E91151ED4CD3400C689FB /* Turtle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Turtle.h; sourceTree = "<group>"; };
+		BD4E91161ED4CD3400C689FB /* Turtle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Turtle.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BD4E90F11ED4C42100C689FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BD4E90EB1ED4C42100C689FB = {
+			isa = PBXGroup;
+			children = (
+				BD4E90F61ED4C42100C689FB /* Turtle Jump */,
+				BD4E90F51ED4C42100C689FB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BD4E90F51ED4C42100C689FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BD4E90F41ED4C42100C689FB /* Turtle Jump.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BD4E90F61ED4C42100C689FB /* Turtle Jump */ = {
+			isa = PBXGroup;
+			children = (
+				BD4E90FA1ED4C42100C689FB /* AppDelegate.h */,
+				BD4E90FB1ED4C42100C689FB /* AppDelegate.m */,
+				BD4E90FD1ED4C42100C689FB /* GameScene.sks */,
+				BD4E90FF1ED4C42100C689FB /* Actions.sks */,
+				BD4E91011ED4C42100C689FB /* GameScene.h */,
+				BD4E91021ED4C42100C689FB /* GameScene.m */,
+				BD4E91151ED4CD3400C689FB /* Turtle.h */,
+				BD4E91161ED4CD3400C689FB /* Turtle.m */,
+				BD4E91041ED4C42100C689FB /* GameViewController.h */,
+				BD4E91051ED4C42100C689FB /* GameViewController.m */,
+				BD4E91071ED4C42100C689FB /* Main.storyboard */,
+				BD4E910A1ED4C42100C689FB /* Assets.xcassets */,
+				BD4E910C1ED4C42100C689FB /* LaunchScreen.storyboard */,
+				BD4E910F1ED4C42100C689FB /* Info.plist */,
+				BD4E90F71ED4C42100C689FB /* Supporting Files */,
+			);
+			path = "Turtle Jump";
+			sourceTree = "<group>";
+		};
+		BD4E90F71ED4C42100C689FB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BD4E90F81ED4C42100C689FB /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BD4E90F31ED4C42100C689FB /* Turtle Jump */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD4E91121ED4C42100C689FB /* Build configuration list for PBXNativeTarget "Turtle Jump" */;
+			buildPhases = (
+				BD4E90F01ED4C42100C689FB /* Sources */,
+				BD4E90F11ED4C42100C689FB /* Frameworks */,
+				BD4E90F21ED4C42100C689FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Turtle Jump";
+			productName = "Turtle Jump";
+			productReference = BD4E90F41ED4C42100C689FB /* Turtle Jump.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BD4E90EC1ED4C42100C689FB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "SJ Kim, Brian Jang";
+				TargetAttributes = {
+					BD4E90F31ED4C42100C689FB = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = BD4E90EF1ED4C42100C689FB /* Build configuration list for PBXProject "Turtle Jump" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BD4E90EB1ED4C42100C689FB;
+			productRefGroup = BD4E90F51ED4C42100C689FB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BD4E90F31ED4C42100C689FB /* Turtle Jump */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BD4E90F21ED4C42100C689FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD4E91091ED4C42100C689FB /* Main.storyboard in Resources */,
+				BD4E90FE1ED4C42100C689FB /* GameScene.sks in Resources */,
+				BD4E910B1ED4C42100C689FB /* Assets.xcassets in Resources */,
+				BD4E910E1ED4C42100C689FB /* LaunchScreen.storyboard in Resources */,
+				BD4E91001ED4C42100C689FB /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BD4E90F01ED4C42100C689FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD4E91061ED4C42100C689FB /* GameViewController.m in Sources */,
+				BD4E90FC1ED4C42100C689FB /* AppDelegate.m in Sources */,
+				BD4E91171ED4CD3400C689FB /* Turtle.m in Sources */,
+				BD4E91031ED4C42100C689FB /* GameScene.m in Sources */,
+				BD4E90F91ED4C42100C689FB /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BD4E91071ED4C42100C689FB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD4E91081ED4C42100C689FB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BD4E910C1ED4C42100C689FB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD4E910D1ED4C42100C689FB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BD4E91101ED4C42100C689FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BD4E91111ED4C42100C689FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BD4E91131ED4C42100C689FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Turtle Jump/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sjkim.Turtle-Jump";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BD4E91141ED4C42100C689FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Turtle Jump/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sjkim.Turtle-Jump";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BD4E90EF1ED4C42100C689FB /* Build configuration list for PBXProject "Turtle Jump" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD4E91101ED4C42100C689FB /* Debug */,
+				BD4E91111ED4C42100C689FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD4E91121ED4C42100C689FB /* Build configuration list for PBXNativeTarget "Turtle Jump" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD4E91131ED4C42100C689FB /* Debug */,
+				BD4E91141ED4C42100C689FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BD4E90EC1ED4C42100C689FB /* Project object */;
+}
