@@ -11,5 +11,6 @@
 @interface Turtle : SKSpriteNode
 
 + (id)turtle;
+- (void)moveRight;
 
 @end

@@ -20,10 +20,13 @@
     
     SKSpriteNode *ground = [SKSpriteNode spriteNodeWithColor:[UIColor greenColor] size:CGSizeMake(self.frame.size.width, 20)];
     ground.position = CGPointMake(0, 0 + ground.frame.size.height / 2);
+    ground.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:ground.size];
+    ground.physicsBody.dynamic = NO;
+    
     [self addChild:ground];
     
     Turtle *turtle = [Turtle turtle];
-    turtle.position = CGPointMake(0, 20 + turtle.frame.size.height / 2);
+    turtle.position = CGPointMake(0, 420 + turtle.frame.size.height / 2);
     [self addChild: turtle];
     
     
@@ -74,6 +77,10 @@
 //    [_label runAction:[SKAction actionNamed:@"Pulse"] withKey:@"fadeInOut"];
 //    
 //    for (UITouch *t in touches) {[self touchDownAtPoint:[t locationInNode:self]];}
+    
+    Turtle *turtle = (Turtle *)[self childNodeWithName:@"turtle"];
+    [turtle moveRight];
+    
 }
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
     for (UITouch *t in touches) {[self touchMovedToPoint:[t locationInNode:self]];}
