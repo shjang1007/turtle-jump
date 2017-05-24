@@ -11,6 +11,7 @@
 @implementation PointsLabel
 + (id)pointsLabelWithFontNamed:(NSString *)fontName {
     PointsLabel *pointsLabel = [PointsLabel labelNodeWithFontNamed:fontName];
+    pointsLabel.name = @"pointsLabel";
     pointsLabel.text = @"0";
     pointsLabel.number = 0;
     

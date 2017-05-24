@@ -17,6 +17,11 @@
     
     turtle.name = @"turtle";
     turtle.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:turtle.size];
+    static const uint32_t turtleCategory = 0x1 << 1;
+    static const uint32_t stepCategory = 0x1 << 2;
+    
+    turtle.physicsBody.categoryBitMask = turtleCategory;
+    turtle.physicsBody.collisionBitMask = stepCategory;
     
     return turtle;
 }
@@ -31,6 +36,7 @@
 }
 
 - (void)start {
-    [self.physicsBody applyImpulse:CGVectorMake(0, 100)];
+    NSLog([NSString stringWithFormat:@"%i", self.physicsBody.collisionBitMask]);
+//    [self.physicsBody applyImpulse:CGVectorMake(0, 100)];
 }
 @end

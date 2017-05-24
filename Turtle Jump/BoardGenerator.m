@@ -25,22 +25,27 @@
 }
 
 - (void)populate {
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < 1; i++) {
         [self generate];
     }
 }
 
 - (void)generate {
 //    SKSpriteNode *step = [SKSpriteNode spriteNodeWithColor:[UIColor greenColor] size:CGSizeMake(self.scene.frame.size.width, 20)];
+    static const uint32_t turtleCategory = 0x1 << 1;
+    static const uint32_t stepCategory = 0x1 << 2;
+    
     SKSpriteNode *step = [SKSpriteNode spriteNodeWithColor:[self getRandomColor] size:CGSizeMake(self.scene.frame.size.width, 20)];
     step.name = @"step";
     step.position = CGPointMake(0, self.currentStepY);
     step.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:step.size];
     step.physicsBody.dynamic = NO;
+    step.physicsBody.categoryBitMask = turtleCategory;
+    step.physicsBody.collisionBitMask = stepCategory;
     
     [self.board addChild:step];
     
-    self.currentStepY += 50;
+    self.currentStepY += 100;
 }
 
 - (UIColor *)getRandomColor {

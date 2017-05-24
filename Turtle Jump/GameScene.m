@@ -39,7 +39,7 @@
     [generator populate];
     
     turtle = [Turtle turtle];
-    turtle.position = CGPointMake(0, 420 + turtle.frame.size.height / 2);
+    turtle.position = CGPointMake(0, turtle.frame.size.height / 2);
     [board addChild:turtle];
     
     
@@ -83,21 +83,38 @@
 
 - (void)didSimulatePhysics {
     [self centerOnNode:turtle];
-    
+    [self handlePoints];
     [self handleGeneration];
     [self handleCleanup];
+}
+
+- (void)handlePoints {
+    [board enumerateChildNodesWithName:@"step" usingBlock:^(SKNode *node, BOOL *stop) {
+        if (node.position.y < turtle.position.y) {
+            PointsLabel *pointsLabel = (PointsLabel *)[self childNodeWithName:@"pointsLabel"];
+            [pointsLabel increment];
+        }
+    }];
 }
 
 - (void)handleGeneration {
     [board enumerateChildNodesWithName:@"step" usingBlock:^(SKNode *node, BOOL *stop) {
         if (node.position.y < turtle.position.y) {
+            static const uint32_t turtleCategory = 0x1 << 1;
+            static const uint32_t stepCategory = 0x1 << 2;
+        
+            node.physicsBody.categoryBitMask = stepCategory;
+            node.physicsBody.collisionBitMask = turtleCategory;
+            
+            
             node.name = @"step_cancelled";
+            
             [generator generate];
         }
     }];
 }
 
-- (void) handleCleanup {
+- (void)handleCleanup {
     [board enumerateChildNodesWithName:@"step" usingBlock:^(SKNode *node, BOOL *stop) {
         if (node.position.y < turtle.position.y - self.frame.size.height / 2 - node.frame.size.height / 2) {
             [node removeFromParent];
@@ -141,6 +158,8 @@
         [self start];
     } else if (self.isGameOver) {
         [self clear];
+    } else {
+        [turtle jump];
     }
     
 }
