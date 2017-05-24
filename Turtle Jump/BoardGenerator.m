@@ -16,6 +16,9 @@
 
 @implementation BoardGenerator
 
+static const uint32_t turtleCategory = 0x1 << 1;
+static const uint32_t stepCategory = 0x1 << 2;
+
 + (id)generatorWithBoard:(SKNode *)board {
     BoardGenerator *generator = [BoardGenerator node];
     generator.currentStepY = 0;
@@ -26,10 +29,7 @@
 
 - (void)populate {
     SKSpriteNode *ground = [SKSpriteNode spriteNodeWithColor:[UIColor purpleColor] size:CGSizeMake(self.scene.frame.size.width, 20)];
-    
-    static const uint32_t turtleCategory = 0x1 << 1;
-    static const uint32_t stepCategory = 0x1 << 2;
-    
+
     ground.name = @"ground";
     ground.position = CGPointMake(0, 0);
     ground.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:ground.size];
@@ -46,8 +46,6 @@
 
 - (void)generateStep {
 //    SKSpriteNode *step = [SKSpriteNode spriteNodeWithColor:[UIColor greenColor] size:CGSizeMake(self.scene.frame.size.width, 20)];
-    static const uint32_t turtleCategory = 0x1 << 1;
-    static const uint32_t stepCategory = 0x1 << 2;
     
     int stepWidth = self.scene.frame.size.width / 5;
     int lowerBound = stepWidth / 2;

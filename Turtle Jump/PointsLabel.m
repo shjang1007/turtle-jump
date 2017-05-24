@@ -22,4 +22,14 @@
     self.number++;
     self.text = [NSString stringWithFormat:@"%i", self.number];
 }
+
+- (void)setPoints:(int)points {
+    self.number = points;
+    self.text = [NSString stringWithFormat:@"%i", self.number];
+}
+
+- (void)reset {
+    self.number = 0;
+    self.text = @"0";
+}
 @end

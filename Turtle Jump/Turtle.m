@@ -9,6 +9,10 @@
 #import "Turtle.h"
 
 @implementation Turtle
+
+static const uint32_t turtleCategory = 0x1 << 1;
+static const uint32_t stepCategory = 0x1 << 2;
+
 + (id)turtle {
     Turtle *turtle = [Turtle spriteNodeWithColor:[UIColor whiteColor] size:CGSizeMake(50, 50)];
     
@@ -17,11 +21,10 @@
     
     turtle.name = @"turtle";
     turtle.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:turtle.size];
-    static const uint32_t turtleCategory = 0x1 << 1;
-    static const uint32_t stepCategory = 0x1 << 2;
     
     turtle.physicsBody.categoryBitMask = turtleCategory;
     turtle.physicsBody.collisionBitMask = stepCategory;
+    turtle.physicsBody.contactTestBitMask = stepCategory;
     
     return turtle;
 }
@@ -32,10 +35,10 @@
 }
 
 - (void)jump {
-    [self.physicsBody applyImpulse:CGVectorMake(0, 40)];
+    [self.physicsBody applyImpulse:CGVectorMake(0, 80)];
 }
 
 - (void)start {
-    [self.physicsBody applyImpulse:CGVectorMake(0, 250)];
+    [self.physicsBody applyImpulse:CGVectorMake(0, 200)];
 }
 @end

@@ -29,7 +29,7 @@
 - (void)didMoveToView:(SKView *)view {
     // Setup your scene here
     self.anchorPoint = CGPointMake(0.5, 0.5);
-    
+    self.physicsWorld.contactDelegate = self;
     
     board = [SKNode node];
     [self addChild:board];
@@ -68,6 +68,11 @@
                                                 ]]];
 }
 
+- (void)didBeginContact:(SKPhysicsContact *)contact {
+    NSLog(@"Touched");
+    [turtle jump];
+}
+
 - (void)start {
     self.isStarted = YES;
     [turtle start];
@@ -99,7 +104,7 @@
 
 - (void)handleGeneration {
     [board enumerateChildNodesWithName:@"step" usingBlock:^(SKNode *node, BOOL *stop) {
-        if (node.position.y < turtle.position.y) {
+        if (node.position.y < turtle.position.y - node.frame.size.height) {
             static const uint32_t turtleCategory = 0x1 << 1;
             static const uint32_t stepCategory = 0x1 << 2;
         
