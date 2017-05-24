@@ -9,6 +9,7 @@
 #import "GameScene.h"
 #import "Turtle.h"
 #import "BoardGenerator.h"
+#import "PointsLabel.h"
 
 @interface GameScene()
 @property BOOL isStarted;
@@ -40,6 +41,11 @@
     turtle = [Turtle turtle];
     turtle.position = CGPointMake(0, 420 + turtle.frame.size.height / 2);
     [board addChild:turtle];
+    
+    
+    PointsLabel *pointsLabel = [PointsLabel pointsLabelWithFontNamed:@"Avenir"];
+    pointsLabel.position = CGPointMake(0, self.frame.size.height / 2 - pointsLabel.fontSize);
+    [self addChild:pointsLabel];
     
     
     // Get label node from scene and store it for use later
@@ -92,7 +98,11 @@
 }
 
 - (void) handleCleanup {
-    
+    [board enumerateChildNodesWithName:@"step" usingBlock:^(SKNode *node, BOOL *stop) {
+        if (node.position.y < turtle.position.y - self.frame.size.height / 2 - node.frame.size.height / 2) {
+            [node removeFromParent];
+        }
+    }];
 }
 
 - (void)centerOnNode:(SKNode *)node {

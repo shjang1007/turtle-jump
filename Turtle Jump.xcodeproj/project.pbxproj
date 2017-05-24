@@ -18,6 +18,7 @@
 		BD4E910E1ED4C42100C689FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD4E910C1ED4C42100C689FB /* LaunchScreen.storyboard */; };
 		BD4E91171ED4CD3400C689FB /* Turtle.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4E91161ED4CD3400C689FB /* Turtle.m */; };
 		BD4E911C1ED5E3C900C689FB /* BoardGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4E911B1ED5E3C800C689FB /* BoardGenerator.m */; };
+		BD4E911F1ED5F3CD00C689FB /* PointsLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4E911E1ED5F3CD00C689FB /* PointsLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,8 @@
 		BD4E91161ED4CD3400C689FB /* Turtle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Turtle.m; sourceTree = "<group>"; };
 		BD4E911A1ED5E3C800C689FB /* BoardGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardGenerator.h; sourceTree = "<group>"; };
 		BD4E911B1ED5E3C800C689FB /* BoardGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardGenerator.m; sourceTree = "<group>"; };
+		BD4E911D1ED5F3CD00C689FB /* PointsLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointsLabel.h; sourceTree = "<group>"; };
+		BD4E911E1ED5F3CD00C689FB /* PointsLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointsLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,8 @@
 				BD4E90FF1ED4C42100C689FB /* Actions.sks */,
 				BD4E91011ED4C42100C689FB /* GameScene.h */,
 				BD4E91021ED4C42100C689FB /* GameScene.m */,
+				BD4E911D1ED5F3CD00C689FB /* PointsLabel.h */,
+				BD4E911E1ED5F3CD00C689FB /* PointsLabel.m */,
 				BD4E911A1ED5E3C800C689FB /* BoardGenerator.h */,
 				BD4E911B1ED5E3C800C689FB /* BoardGenerator.m */,
 				BD4E91151ED4CD3400C689FB /* Turtle.h */,
@@ -179,6 +184,7 @@
 				BD4E91171ED4CD3400C689FB /* Turtle.m in Sources */,
 				BD4E91031ED4C42100C689FB /* GameScene.m in Sources */,
 				BD4E90F91ED4C42100C689FB /* main.m in Sources */,
+				BD4E911F1ED5F3CD00C689FB /* PointsLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
