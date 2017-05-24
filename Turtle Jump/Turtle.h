@@ -12,5 +12,7 @@
 
 + (id)turtle;
 - (void)moveRight;
+- (void)jump;
+- (void)start;
 
 @end

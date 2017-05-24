@@ -25,4 +25,12 @@
     SKAction *incrementRight = [SKAction moveByX:10 y:0 duration:0];
     [self runAction:incrementRight];
 }
+
+- (void)jump {
+    [self.physicsBody applyImpulse:CGVectorMake(0, 40)];
+}
+
+- (void)start {
+    [self.physicsBody applyImpulse:CGVectorMake(0, 100)];
+}
 @end

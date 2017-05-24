@@ -17,6 +17,7 @@
 		BD4E910B1ED4C42100C689FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD4E910A1ED4C42100C689FB /* Assets.xcassets */; };
 		BD4E910E1ED4C42100C689FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD4E910C1ED4C42100C689FB /* LaunchScreen.storyboard */; };
 		BD4E91171ED4CD3400C689FB /* Turtle.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4E91161ED4CD3400C689FB /* Turtle.m */; };
+		BD4E911C1ED5E3C900C689FB /* BoardGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4E911B1ED5E3C800C689FB /* BoardGenerator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,8 @@
 		BD4E910F1ED4C42100C689FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD4E91151ED4CD3400C689FB /* Turtle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Turtle.h; sourceTree = "<group>"; };
 		BD4E91161ED4CD3400C689FB /* Turtle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Turtle.m; sourceTree = "<group>"; };
+		BD4E911A1ED5E3C800C689FB /* BoardGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardGenerator.h; sourceTree = "<group>"; };
+		BD4E911B1ED5E3C800C689FB /* BoardGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardGenerator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,8 @@
 				BD4E90FF1ED4C42100C689FB /* Actions.sks */,
 				BD4E91011ED4C42100C689FB /* GameScene.h */,
 				BD4E91021ED4C42100C689FB /* GameScene.m */,
+				BD4E911A1ED5E3C800C689FB /* BoardGenerator.h */,
+				BD4E911B1ED5E3C800C689FB /* BoardGenerator.m */,
 				BD4E91151ED4CD3400C689FB /* Turtle.h */,
 				BD4E91161ED4CD3400C689FB /* Turtle.m */,
 				BD4E91041ED4C42100C689FB /* GameViewController.h */,
@@ -170,6 +175,7 @@
 			files = (
 				BD4E91061ED4C42100C689FB /* GameViewController.m in Sources */,
 				BD4E90FC1ED4C42100C689FB /* AppDelegate.m in Sources */,
+				BD4E911C1ED5E3C900C689FB /* BoardGenerator.m in Sources */,
 				BD4E91171ED4CD3400C689FB /* Turtle.m in Sources */,
 				BD4E91031ED4C42100C689FB /* GameScene.m in Sources */,
 				BD4E90F91ED4C42100C689FB /* main.m in Sources */,

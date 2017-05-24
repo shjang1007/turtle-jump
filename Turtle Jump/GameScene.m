@@ -8,6 +8,12 @@
 
 #import "GameScene.h"
 #import "Turtle.h"
+#import "BoardGenerator.h"
+
+@interface GameScene()
+@property BOOL isStarted;
+@property BOOL isGameOver;
+@end
 
 @implementation GameScene {
     SKShapeNode *_spinnyNode;
@@ -15,6 +21,7 @@
     
     Turtle *turtle;
     SKNode *board;
+    BoardGenerator *generator;
     
 }
 
@@ -26,14 +33,9 @@
     board = [SKNode node];
     [self addChild:board];
     
-    
-    
-    SKSpriteNode *ground = [SKSpriteNode spriteNodeWithColor:[UIColor greenColor] size:CGSizeMake(self.frame.size.width, 20)];
-    ground.position = CGPointMake(0, 0 + ground.frame.size.height / 2);
-    ground.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:ground.size];
-    ground.physicsBody.dynamic = NO;
-    
-    [board addChild:ground];
+    generator = [BoardGenerator generatorWithBoard:board];
+    [self addChild:generator];
+    [generator populate];
     
     turtle = [Turtle turtle];
     turtle.position = CGPointMake(0, 420 + turtle.frame.size.height / 2);
@@ -60,13 +62,39 @@
                                                 ]]];
 }
 
+- (void)start {
+    self.isStarted = YES;
+    [turtle start];
+}
+
+- (void)clear {
+    
+}
+
+- (void)gameOver {
+    
+}
+
 - (void)didSimulatePhysics {
     [self centerOnNode:turtle];
+    
+    [self handleGeneration];
+    [self handleCleanup];
+}
+
+- (void)handleGeneration {
+    [self enumerateChildNodesWithName:@"obstacle" usingBlock:^(SKNode *node, BOOL *stop) {
+        
+    }];
+}
+
+- (void) handleCleanup {
+    
 }
 
 - (void)centerOnNode:(SKNode *)node {
     CGPoint positionInScene = [self convertPoint:node.position fromNode:node.parent];
-    board.position = CGPointMake(board.position.x - positionInScene.x, board.position.y - positionInScene.y);
+    board.position = CGPointMake(board.position.x, board.position.y - positionInScene.y);
 }
 
 - (void)touchDownAtPoint:(CGPoint)pos {
@@ -96,7 +124,11 @@
 //    
 //    for (UITouch *t in touches) {[self touchDownAtPoint:[t locationInNode:self]];}
     
-    [turtle moveRight];
+    if (!self.isStarted) {
+        [self start];
+    } else if (self.isGameOver) {
+        [self clear];
+    }
     
 }
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
