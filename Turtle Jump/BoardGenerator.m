@@ -32,7 +32,7 @@
 
 - (void)generate {
 //    SKSpriteNode *step = [SKSpriteNode spriteNodeWithColor:[UIColor greenColor] size:CGSizeMake(self.scene.frame.size.width, 20)];
-    SKSpriteNode *step = [SKSpriteNode spriteNodeWithColor:[UIColor greenColor] size:CGSizeMake(self.scene.frame.size.width, 20)];
+    SKSpriteNode *step = [SKSpriteNode spriteNodeWithColor:[self getRandomColor] size:CGSizeMake(self.scene.frame.size.width, 20)];
     step.name = @"step";
     step.position = CGPointMake(0, self.currentStepY);
     step.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:step.size];
@@ -41,6 +41,26 @@
     [self.board addChild:step];
     
     self.currentStepY += 50;
+}
+
+- (UIColor *)getRandomColor {
+    int rand = arc4random() % 4;
+    
+    UIColor *color;
+    switch (rand) {
+        case 0:
+        case 1:
+        case 2:
+            color = [UIColor greenColor];
+            break;
+        case 3:
+            color = [UIColor blueColor];
+            break;
+        default:
+            break;
+    }
+    
+    return color;
 }
 
 @end

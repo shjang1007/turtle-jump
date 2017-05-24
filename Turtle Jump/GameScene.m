@@ -83,8 +83,11 @@
 }
 
 - (void)handleGeneration {
-    [self enumerateChildNodesWithName:@"obstacle" usingBlock:^(SKNode *node, BOOL *stop) {
-        
+    [board enumerateChildNodesWithName:@"step" usingBlock:^(SKNode *node, BOOL *stop) {
+        if (node.position.y < turtle.position.y) {
+            node.name = @"step_cancelled";
+            [generator generate];
+        }
     }];
 }
 
