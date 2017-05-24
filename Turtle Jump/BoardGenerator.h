@@ -12,6 +12,6 @@
 
 + (id)generatorWithBoard:(SKNode *)board;
 - (void)populate;
-- (void)generate;
+- (void)generateStep;
 
 @end

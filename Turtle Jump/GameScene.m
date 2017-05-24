@@ -109,7 +109,7 @@
             
             node.name = @"step_cancelled";
             
-            [generator generate];
+            [generator generateStep];
         }
     }];
 }

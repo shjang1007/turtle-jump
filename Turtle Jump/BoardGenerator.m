@@ -25,19 +25,39 @@
 }
 
 - (void)populate {
-    for (int i = 0; i < 1; i++) {
-        [self generate];
+    SKSpriteNode *ground = [SKSpriteNode spriteNodeWithColor:[UIColor purpleColor] size:CGSizeMake(self.scene.frame.size.width, 20)];
+    
+    static const uint32_t turtleCategory = 0x1 << 1;
+    static const uint32_t stepCategory = 0x1 << 2;
+    
+    ground.name = @"ground";
+    ground.position = CGPointMake(0, 0);
+    ground.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:ground.size];
+    ground.physicsBody.dynamic = NO;
+    ground.physicsBody.categoryBitMask = stepCategory;
+    ground.physicsBody.collisionBitMask = turtleCategory;
+
+    [self.board addChild:ground];
+
+    for (int i = 0; i < 13; i++) {
+        [self generateStep];
     }
 }
 
-- (void)generate {
+- (void)generateStep {
 //    SKSpriteNode *step = [SKSpriteNode spriteNodeWithColor:[UIColor greenColor] size:CGSizeMake(self.scene.frame.size.width, 20)];
     static const uint32_t turtleCategory = 0x1 << 1;
     static const uint32_t stepCategory = 0x1 << 2;
     
-    SKSpriteNode *step = [SKSpriteNode spriteNodeWithColor:[self getRandomColor] size:CGSizeMake(self.scene.frame.size.width, 20)];
+    int stepWidth = self.scene.frame.size.width / 5;
+    int lowerBound = stepWidth / 2;
+    int upperBound = self.scene.frame.size.width - stepWidth / 2;
+    
+    int rand = lowerBound +  arc4random() % (upperBound - lowerBound);
+    
+    SKSpriteNode *step = [SKSpriteNode spriteNodeWithColor:[self getRandomColor] size:CGSizeMake(stepWidth, 20)];
     step.name = @"step";
-    step.position = CGPointMake(0, self.currentStepY);
+    step.position = CGPointMake(rand - self.scene.frame.size.width / 2, self.currentStepY);
     step.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:step.size];
     step.physicsBody.dynamic = NO;
     step.physicsBody.categoryBitMask = turtleCategory;
@@ -45,7 +65,7 @@
     
     [self.board addChild:step];
     
-    self.currentStepY += 100;
+    self.currentStepY += 150;
 }
 
 - (UIColor *)getRandomColor {

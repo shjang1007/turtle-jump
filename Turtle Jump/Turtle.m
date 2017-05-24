@@ -36,7 +36,6 @@
 }
 
 - (void)start {
-    NSLog([NSString stringWithFormat:@"%i", self.physicsBody.collisionBitMask]);
-//    [self.physicsBody applyImpulse:CGVectorMake(0, 100)];
+    [self.physicsBody applyImpulse:CGVectorMake(0, 250)];
 }
 @end
